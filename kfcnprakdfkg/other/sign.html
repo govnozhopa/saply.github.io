@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tides of the Abyss | Вход</title>
+    <link rel="stylesheet" href="../style/sign.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=MedievalSharp&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="header-container">
+        <div class="logo-container">
+            <img src="../image/Abyssal Creature.webp" alt="Abyss Logo" class="logo">
+            <h1>Tides of the Abyss</h1>
+        </div>
+        
+        <button class="burger-menu" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <nav class="main-nav">
+            <ul>
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../other/sign.html">Выход</a></li>
+                <li><a href="./calendar.html" class="active">Календарь</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <!-- Основная форма входа/регистрации -->
+    <main class="login-container">
+        <div class="login-box">
+            <div class="tab-buttons">
+                <button class="tab-btn active" id="loginTab">Вход</button>
+                <button class="tab-btn" id="registerTab">Регистрация</button>
+            </div>
+
+            <!-- Форма входа -->
+            <form id="loginForm" class="form active">
+                <h2>Глубины зовут...</h2>
+                <div class="input-group">
+                    <label for="username">Имя Глубинного</label>
+                    <input type="text" id="username" placeholder="Введите имя" required>
+                    <span class="input-focus"></span>
+                </div>
+                <div class="input-group">
+                    <label for="password">Печать Бездны</label>
+                    <input type="password" id="password" placeholder="Введите пароль" required>
+                    <span class="input-focus"></span>
+                </div>
+                <div class="remember-me">
+                    <input type="checkbox" id="rememberMe">
+                    <label for="rememberMe" class="cube-checkbox">
+                        <span class="cube">
+                            <span class="front"><i class="fas fa-lock"></i></span>
+                            <span class="back"><i class="fas fa-lock-open"></i></span>
+                        </span>
+                        <span class="text">Запомнить меня</span>
+                    </label>
+                </div>
+                <button type="submit" class="submit-btn">Погрузиться</button>
+            </form>
+
+            <!-- Форма регистрации -->
+            <form id="registerForm" class="form">
+                <h2>Заключить Договор</h2>
+                <div class="input-group">
+                    <label for="regUsername">Имя Глубинного</label>
+                    <input type="text" id="regUsername" placeholder="Придумайте имя" required>
+                    <span class="input-focus"></span>
+                </div>
+                <div class="input-group">
+                    <label for="regPassword">Печать Бездны</label>
+                    <input type="password" id="regPassword" placeholder="Придумайте пароль" required>
+                    <span class="input-focus"></span>
+                </div>
+                <div class="input-group">
+                    <label for="confirmPassword">Подтверждение Печати</label>
+                    <input type="password" id="confirmPassword" placeholder="Повторите пароль" required>
+                    <span class="input-focus"></span>
+                </div>
+                <button type="submit" class="submit-btn">Принять Клятву</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="main-footer">
+        <p>© 2023 Tides of the Abyss. Все права принадлежат Бездне.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-discord"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script src="../script/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tides of the Abyss | Календарь подарков</title>
+    <link rel="stylesheet" href="../style/valendar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=MedievalSharp&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Анимированный фон -->
+    <div class="abyss-background">
+        <div class="deep-water"></div>
+        <div class="floating-bubbles"></div>
+        <div class="glowing-circles"></div>
+    </div>
+
+   <header class="main-header">
+    <div class="header-container">
+        <div class="logo-container">
+            <img src="../image/Abyssal Creature.webp" alt="Abyss Logo" class="logo">
+            <h1>Tides of the Abyss</h1>
+        </div>
+        
+        <button class="burger-menu" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <nav class="main-nav">
+            <ul>
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../other/sign.html">Выход</a></li>
+                <li><a href="./calendar.html" class="active">Календарь</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <!-- Основной контент -->
+    <main class="calendar-container">
+        <div class="calendar-header">
+            <h2><i class="fas fa-gift"></i> Календарь подарков</h2>
+            <div class="timer">
+                <span>Следующий подарок через:</span>
+                <div id="countdown">23:59:59</div>
+            </div>
+        </div>
+
+        <!-- Сетка календаря -->
+        <div class="calendar-grid">
+            <!-- День 1 -->
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">1</span>
+                    <span class="day-title">День 1</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/Доспехи Глубинного Ужаса.webp" alt="Древний артефакт">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Доспехи глубинного ужаса</h3>
+                        <p>Мощный артефакт из глубин</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- День 2 -->
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">2</span>
+                    <span class="day-title">День 2</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/наручи с граввировкой.png" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Наручи с гравировкой</h3>
+                        <p>любая ФИЗИЧЕСКАЯ атака имеет шанс в 5% усилиться в полтора раза - т.е на 50%.</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">3</span>
+                    <span class="day-title">День 3</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/Кракен-скакун.webp" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Кракен-скакун</h3>
+                        <p>Усиливает магические способности</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">4</span>
+                    <span class="day-title">День 4</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/Спутник Бездны.webp" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Спутник бездны</h3>
+                        <p>Усиливает магические способности</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">5</span>
+                    <span class="day-title">День 5</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/кольцо с ястребом.png" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Кольцо с ястребом</h3>
+                        <p>Увеличивает дальность полета стрел на 7.55%</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">6</span>
+                    <span class="day-title">День 6</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/кольцо с дремлющим драконов.png" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Кольцо с дремлющим драконом</h3>
+                        <p>Скрывает звуки того, кто его носит</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">7</span>
+                    <span class="day-title">День 7</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/кольцо защиты гора.png" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Кольцо защиты Гора</h3>
+                        <p>Уменьшает урон от удара в спину</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">8</span>
+                    <span class="day-title">День 8</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/иллюзорное кольцо завоевателя.png" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Иллюзорное кольцо завоевателя</h3>
+                        <p>Делает невидимым оружие в левой руке.</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">9</span>
+                    <span class="day-title">День 9</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/иллюзорное кольцоо возвышения.png" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Иллюзорное кольцо возвышения</h3>
+                        <p>Делает невидимым оружие в правой руке.</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">10</span>
+                    <span class="day-title">День 10</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/белое кольцо.png" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Белое кольцо</h3>
+                        <p>Придает игроку облик фантома</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">11</span>
+                    <span class="day-title">День 11</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/древнее кольцо солнца.png" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Древнее кольцо Солнца</h3>
+                        <p>После получения удара может взорваться (при этом не причиняя вред владельцу)</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">12</span>
+                    <span class="day-title">День 12</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/кольцо сопротивления.png" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Кольцо сопротивления</h3>
+                        <p>Повышает сопротивления к яду, проклятиям, кровотечению и окаменению на 12%</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">13</span>
+                    <span class="day-title">День 13</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/меч дракона.webp" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Меч дракона</h3>
+                        <p>Поджигает врага с ударом</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">14</span>
+                    <span class="day-title">День 14</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/кинжал присциллы.webp" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Кинжал Присциллы</h3>
+                        <p>Дает неуязвимость к тяжести</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">15</span>
+                    <span class="day-title">День 15</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/обисдиановый большой меч.webp" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Обсидиановый большой меч</h3>
+                        <p>Усиливает магические способности</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">16</span>
+                    <span class="day-title">День 16</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/большой лунный меч.webp" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Большой лунный меч</h3>
+                        <p>Невидимость в ночное время</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">17</span>
+                    <span class="day-title">День 17</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/большая секира главаря дракона.webp" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Большая секира Короля Драконов</h3>
+                        <p>Призывает спутника в виде маленького дракона</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">18</span>
+                    <span class="day-title">День 18</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/большой меч драконов.webp" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Большой меч дракона</h3>
+                        <p>Бафф к урону +25%</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">19</span>
+                    <span class="day-title">День 19</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/хвост тапор.webp" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Хвост-топор</h3>
+                        <p>Усиливает магические способности</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">20</span>
+                    <span class="day-title">День 20</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/охранная плеть.webp" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Охранная плеть</h3>
+                        <p>Откидывает врагов на далекое расстояние с шансом 4%</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">21</span>
+                    <span class="day-title">День 21</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/глаз дракона.webp" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Глаз дракона</h3>
+                        <p>Усиливает магические способности</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">22</span>
+                    <span class="day-title">День 22</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/меч солнца.webp" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Меч Солнца</h3>
+                        <p>Ненадолго поджигает врага</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">23</span>
+                    <span class="day-title">День 23</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/священный меч лотрика.webp" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Священный меч Лотрика</h3>
+                        <p>+25% к вере</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">24</span>
+                    <span class="day-title">День 24</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/храброе сердце.webp" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Храброе сердце</h3>
+                        <p>+1200 к хп</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">25</span>
+                    <span class="day-title">День 25</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/канделябр клирика.webp" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Канделябр клирика</h3>
+                        <p>+1000 к ловкости</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">26</span>
+                    <span class="day-title">День 26</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/меч анри.webp" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Меч Анри</h3>
+                        <p>Усиливает магические способности</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">27</span>
+                    <span class="day-title">День 27</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/клинок хаоса.webp" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Клинок хаоса</h3>
+                        <p>+888 к урону, поджог врага на 4 секунды</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">28</span>
+                    <span class="day-title">День 28</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/жажда крови.webp" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Жажда крови</h3>
+                        <p>При ударе дает кровотечение врагу</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">29</span>
+                    <span class="day-title">День 29</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/ветхий кл нок.webp" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Ветхий клинок</h3>
+                        <p>Дает неуязвимость на 9 сек после удара</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day">
+                <div class="day-header">
+                    <span class="day-number">30</span>
+                    <span class="day-title">День 30</span>
+                </div>
+                <div class="prize-content">
+                    <div class="prize-image">
+                        <img src="../image/талисман святого.webp" alt="Руна тьмы">
+                    </div>
+                    <div class="prize-info">
+                        <h3>Талисман святого</h3>
+                        <p>+100% к вере, +50% к интелекту, +25% к ловкости, возможность летать на 25 сек.</p>
+                        <button class="claim-btn">Забрать подарок</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Остальные дни (3-30) -->
+            <!-- ... -->
+        </div>
+    </main>
+
+    <!-- Подвал -->
+   <footer class="main-footer">
+        <p>© 2023 Dark Realms Interactive. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Discord</a>
+            <a href="#">Twitter</a>
+            <a href="#">YouTube</a>
+        </div>
+    </footer>
+
+    <script src="../script/calendar.js"></script>
+</body>
+</html>

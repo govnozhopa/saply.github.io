@@ -1,0 +1,429 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'MedievalSharp', cursive;
+    color: #e0e0e0;
+    background-color: #0a0a12;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: 700;
+    color: #c9a66b;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-left: 15px;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(10, 10, 18, 0.8);
+    border-bottom: 1px solid #2a2a3a;
+    position: relative;
+    z-index: 10;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container h1 a {
+    color: #c9a66b;
+    text-decoration: none;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #c9a66b;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    background-color: #2a2a3a;
+    color: #c9a66b;
+}
+
+/* Основные стили */
+:root {
+    --abyss-blue: #1a3a5a;
+    --deep-blue: #0a1a2a;
+    --gold-accent: #c9a66b;
+    --text-light: #e0e0e0;
+}
+
+/* Анимированный фон */
+.abyss-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.deep-water {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at bottom, #041a3a 0%, #000000 100%);
+}
+
+.floating-bubbles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="20" cy="20" r="3" fill="rgba(58,124,165,0.3)"/></svg>');
+    background-size: 40px 40px;
+    animation: bubbles-float 60s linear infinite;
+}
+
+.glowing-circles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 30%, rgba(58,124,165,0.1) 0%, transparent 50%);
+    animation: glow-pulse 8s infinite alternate;
+}
+
+@keyframes bubbles-float {
+    0% { background-position: 0 0; }
+    100% { background-position: 1000px 1000px; }
+}
+
+@keyframes glow-pulse {
+    0% { opacity: 0.3; }
+    100% { opacity: 0.7; }
+}
+
+/* Календарь */
+.calendar-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.calendar-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(20, 30, 50, 0.5);
+    border-radius: 10px;
+    border: 1px solid var(--gold-accent);
+    box-shadow: 0 0 20px rgba(201, 166, 107, 0.2);
+}
+
+.calendar-header h2 {
+    font-family: 'Cinzel Decorative', serif;
+    color: var(--gold-accent);
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.timer {
+    font-size: 1.2rem;
+    color: var(--text-light);
+}
+
+#countdown {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.8rem;
+    color: var(--gold-accent);
+    margin-top: 0.5rem;
+}
+
+/* Сетка календаря */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.calendar-day {
+    background: rgba(20, 30, 50, 0.7);
+    border: 1px solid var(--abyss-blue);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.calendar-day:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 50, 100, 0.4);
+    border-color: var(--gold-accent);
+}
+
+.day-header {
+    background: rgba(26, 58, 90, 0.6);
+    padding: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--abyss-blue);
+}
+
+.day-number {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.8rem;
+    color: var(--gold-accent);
+    font-weight: bold;
+}
+
+.day-title {
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+.prize-content {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.prize-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    border: 3px solid var(--gold-accent);
+    padding: 5px;
+    background: rgba(10, 20, 40, 0.5);
+    transition: all 0.3s ease;
+}
+
+.prize-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 5px rgba(201, 166, 107, 0.5));
+}
+
+.prize-info h3 {
+    color: var(--gold-accent);
+    font-family: 'Cinzel Decorative', serif;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.prize-info p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+    min-height: 40px;
+}
+
+.claim-btn {
+    background: linear-gradient(to right, #3a2e27, #5a4a3a);
+    color: var(--text-light);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-family: 'MedievalSharp', cursive;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.claim-btn:hover {
+    background: linear-gradient(to right, #4a3e37, #6a5a4a);
+    box-shadow: 0 0 15px rgba(201, 166, 107, 0.3);
+}
+
+.claimed .claim-btn {
+    background: #2a4a3a;
+    cursor: not-allowed;
+}
+
+/* Footer */
+.main-footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(10, 10, 18, 0.8);
+    border-top: 1px solid #2a2a3a;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: #c9a66b;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #e0e0e0;
+}
+
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .calendar-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .calendar-header h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Бургер-меню */
+.burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.burger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #c9a66b;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block;
+    }
+    
+    .main-nav {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: rgba(10, 10, 18, 0.95);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        clip-path: circle(0px at 90% -10%);
+        -webkit-clip-path: circle(0px at 90% -10%);
+        transition: all 0.8s ease-out;
+        z-index: 1000;
+        pointer-events: none;
+    }
+    
+    .main-nav.active {
+        clip-path: circle(1500px at 90% -10%);
+        -webkit-clip-path: circle(1500px at 90% -10%);
+        pointer-events: all;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .main-nav li {
+        margin: 15px 0;
+        opacity: 0;
+    }
+    
+    .main-nav.active li {
+        animation: fadeIn 0.5s ease forwards;
+    }
+    
+    .main-nav.active li:nth-child(1) {
+        animation-delay: 0.2s;
+    }
+    
+    .main-nav.active li:nth-child(2) {
+        animation-delay: 0.4s;
+    }
+    
+    .main-nav.active li:nth-child(3) {
+        animation-delay: 0.6s;
+    }
+    
+    .burger-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+    
+    .burger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .burger-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -6px);
+    }
+    
+    .calendar-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .calendar-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .prize-image {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .prize-info h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
